@@ -38,18 +38,21 @@
       function enableField(e){
          if (e==-1) {
             document.getElementById('course').disabled = true;
-            document.getElementById('gender').disabled = true;  
             document.getElementById('birthday').disabled = true;
+            document.getElementsByName('gender').disabled = true;  
+            
          }
           else if(e==1) {
             document.getElementById('course').disabled = false;
-            document.getElementById('gender').disabled = true;  
             document.getElementById('birthday').disabled = true;
+            document.getElementByName('gender').disabled = true;  
+            
           }
           else  {
             document.getElementById('course').disabled = true;
-            document.getElementById('gender').disabled = false;  
             document.getElementById('birthday').disabled = false; 
+            document.getElementByName('gender').disabled = false;  
+            
           }
         
       }
