@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--	Author: Sit Sin Ting, Cho Cheuk Ying
+		Date:	Dec 7, 2020
+		File:	register.html
+		Purpose: Project: Online Examination System
+-->
+
+<html>
+
+<head>
+	<title>Online Examination System</title>
+	<script src="readImg.js"></script> 
+</head>
+
+<body onload="enableField(-1)">
+    <br>
+	<h1>Online Examination System<br>User Registration</h1>
+	<span>Author: Sit Sin Ting, Cho Cheuk Ying</span>
+	<br>
+	<span>Student ID: 18053451D, 18024727D</span>
+    <br>
+    <br>
+
+    
+<form action="register.php" method="post">
+    <table>
+        <tr>
+          <td><p>Please select your role:</p></td>
+          <td><input type="radio" id="teacher" name="role" value="teacher" onclick="enableField(1)">
+            <label for="teacher">Teacher</label>
+          <input type="radio" id="student" name="role" value="student" onclick="enableField(0)">
+            <label for="student">Student</label></td>
+          <td rowspan="5"><p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Font_Awesome_5_regular_user-circle.svg/991px-Font_Awesome_5_regular_user-circle.svg.png" id="proPicArea" style="height: 144px; background-color: rgb(106, 221, 250);" ></img></p></td>  
+        </tr>
+        <tr>
+          <td><label for="id">Login ID: </label></td>
+          <td><input type="text" id="id" name="id"></td>
+        </tr>
+        <tr>
+            <td><label for="pw">Password: </label></td>
+            <td><input type="password" id="pw" name="pw"></td>
+          </tr>
+        <tr>
+            <td><label for="name">Nick Name: </label></td>
+            <td><input type="text" id="name" name="name"></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email: </label></td>
+            <td><input type="email" id="email" name="email"></td>
+        </tr>
+        <tr>
+            <td><label for="myfile">Select a Profile Image: </label></td>
+            <td><input type="file" id="upload" name="proPic" onchange="document.getElementById('proPicArea').src = window.URL.createObjectURL(this.files[0])"></td>
+        </tr>
+        <tr>
+            <td><label for="gender">Gender: </label></td>
+            <td><input type="radio" id="gender" name="gender" value="m">
+                <label for="m">M</label>
+              <input type="radio" id="gender" name="gender" value="f">
+                <label for="f">F</label></td>
+        </tr>
+        <tr>
+            <td><label for="birthday">Birthday: </label></td>
+            <td><input type="date" id="birthday" name="birthday"></td>
+        </tr>
+        <tr>
+            <td><label for="course">Course: </label></td>
+            <td><input type="text" id="course" name="course"></td>
+            <td><input type="submit" value="Submit"></td>
+        </tr>
+
+    </table>
+
+
+    
+    
+  </form>
+  
+</body>
+</html>
